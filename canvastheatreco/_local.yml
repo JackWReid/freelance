@@ -1,0 +1,13 @@
+# Site settings
+title: jackwreid
+email: emailjackreid@gmail.com
+description: Frontend web designer from the UK.
+baseurl: ""
+url: /Users/Jack/dev/canvastheatreco/_site/
+twitter_username: jackreid
+github_username:  JackWReid
+
+# Build settings
+markdown: kramdown
+permalink: none
+exclude: [node_modules]

@@ -1,0 +1,59 @@
+//               //
+//    COLOURS    //
+//               //
+
+$c-white: #FFF;
+$c-grey: #F1F1F1;
+$c-blue-dark: #4A4D5D;
+$c-blue-pale: #CFD3E6;
+
+//               //
+//     FONTS     //
+//               //
+
+@font-face {
+	font-family: 'Neuzeit';
+	src: url('fonts/NeuzeitGroteskTOT-Bol.eot');
+	src: url('fonts/NeuzeitGroteskTOT-Bol.eot?#iefix') format('embedded-opentype'),
+		url('fonts/NeuzeitGroteskTOT-Bol.woff') format('woff'),
+		url('fonts/NeuzeitGroteskTOT-Bol.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('fonts/HelveticaNeue-Light.eot');
+	src: url('fonts/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+		url('fonts/HelveticaNeue-Light.woff') format('woff'),
+		url('fonts/HelveticaNeue-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+$f-main: "Helvetica Neue", Helvetica, sans-serif;
+$f-title: "Neuzeit", Helvetica, sans-serif;
+
+//               //
+//   MEASURES    //
+//               //
+
+$m-content-column: 900px;
+$m-text-column: 30rem;
+
+$br-tablet: 900px;
+$br-phone: 500px;
+
+//               //
+//     FLUFF     //
+//               //
+
+@mixin para-style{
+	max-width: $m-text-column;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5em;
+}
+
+$tr-quick: all .2s ease-in-out;

@@ -1,0 +1,133 @@
+//                    //
+//    SITE HEADER     //
+//                    //
+
+.site-header{
+	height: 200px;
+	background: $c-blue-dark;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	.site-logo{
+		height: 200px;
+		width: 200px;
+	}
+
+		.site-logo img{
+			display: block;
+			margin: 0 auto;
+			max-height: 100%;
+		}
+
+	.site-nav{
+		height: 100%;
+		width: 400px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+		.site-nav a{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			width: 200px;
+			color: $c-white;
+			transition: $tr-quick;
+		}
+
+			.site-nav a:hover{
+				background: $c-blue-pale;
+			}
+
+@media screen and (max-width: $br-phone){
+	.site-header{
+		height: auto;
+		display: block;
+	}
+
+	.site-nav,
+	.site-logo{
+		width: 100%;
+	}
+
+		.site-nav a{
+			width: 100%;
+			padding: 1em;
+		}
+}
+
+
+//                    //
+//   HOME VARIATION   //
+//                    //
+
+.site-header--huge{
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+	color: $c-white;
+	background:	linear-gradient(
+								rgba(0,0,0,0.5),
+								rgba(0,0,0,0.8)
+							),
+							url('../images/headerbg.jpg');
+	background-size: cover;
+	background-position: center;
+
+	@media screen and (max-width: $br-phone){
+		height: 120vh;
+		margin-bottom: 0;
+	}
+}
+
+	.site-header--huge__stab{
+		max-width: 20em;
+		text-align: justify;
+		line-height: 1.5em;
+	}
+
+.site-logo--huge{
+	height: 300px;
+	width: 300px;
+}
+
+.site-navigation--huge{
+	margin-top: 2em;
+	max-width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-family: $f-title;
+	color: $c-blue-dark;
+
+	@media screen and (max-width: $br-phone){
+		display: block;
+
+		a{
+			margin: 0 auto;
+		}
+	}
+
+	a{
+		opacity: 0.8;
+		display: block;
+		font-size: 16px;
+		min-width: 7em;
+		flex: 1;
+		padding: 10px;
+		text-align: center;
+		background: $c-white;
+		transition: $tr-quick;
+
+		&:hover{
+			opacity: 1;
+		}
+	}
+}

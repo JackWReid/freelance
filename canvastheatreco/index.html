@@ -1,0 +1,96 @@
+---
+title: home
+layout: default
+---
+
+{% include header-huge.html %}
+
+<section class="heroes">
+	<div class="hero-image" style="background: url('images/posts/ongoing-work.jpg'); background-size: cover; background-position: center;">
+		<a href="{{ site.url }}/news/ongoing-work.html" class="hero-image__link">
+			<div class="hero-image__label">
+				<h1 class="hero-image__label__text">Ongoing Work: The Latest With Canvas</h1>
+			</div>
+		</a>
+	</div>
+	<div class="hero-image" style="background: url('images/posts/the-star-child.jpg'); background-size: cover; background-position: center;">
+		<a href="{{ site.url }}/newtheatre/" class="hero-image__link">
+			<div class="hero-image__label">
+				<h1 class="hero-image__label__text">New Theatre: The Star Child</h1>
+			</div>
+		</a>
+	</div>
+	<div class="hero-image" style="background: url('images/posts/star-child-cast/kate.jpg'); background-size: cover; background-position: center;">
+		<a href="{{ site.url }}/news/star-child-cast.html" class="hero-image__link">
+			<div class="hero-image__label">
+				<h1 class="hero-image__label__text">The Star Child Casting &amp; Crew</h1>
+			</div>
+		</a>
+	</div>
+	<div class="hero-image" style="background: url('images/scratch.jpg'); background-size: cover; background-position: center;">
+		<a href="{{ site.url }}/scratch/" class="hero-image__link">
+			<div class="hero-image__label">
+				<h1 class="hero-image__label__text">Scratch Night</h1>
+			</div>
+		</a>
+	</div>
+</section>
+
+<section class="home-news">
+	<div class="section-box">
+		<div class="section-box__text">News</div>
+	</div>
+	<ul class="home-news__list">
+	{% for post in site.posts limit: 3 %}
+		<li class="news-item">
+			<a href="{{ site.url }}{{ post.url }}">
+				<h1>{{ post.title }}</h1>
+				<time>{{ post.date | date: '%B %d, %Y' }}</time>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</section>
+
+<section class="heroes">
+	<div class="hero-image" style="background: url('images/workshops.jpg'); background-size: cover; background-position: center;">
+		<a href="{{ site.url }}/workshops/" class="hero-image__link">
+			<div class="hero-image__label">
+				<h1 class="hero-image__label__text">Youth Workshops</h1>
+			</div>
+		</a>
+	</div>
+</section>
+
+<section class="twitter-wrapper">
+	<div class="section-box--dark">
+		<div class="section-box__text">Canvas Theatre Tweets</div>
+	</div>
+	<a class="twitter-timeline"
+		data-chrome="noheader nofooter noborders transparent"
+		href="https://twitter.com/CanvasTC"
+		data-widget-id="674517332736262144">
+		Tweets by @CanvasTC</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
+
+<div class="home-associates">
+	<div class="section-box--dark">
+		<div class="section-box__text">Associates</div>
+	</div>
+	<ul>
+		<li><a href="http://www.etchtheatre.com/events/">Etch New Writing Night London</a></li>
+		<li><a href="http://www.squashboxtheatre.co.uk/">Squashbox Theatre</a></li>
+		<li><a href="https://www.facebook.com/thepeoplesstringfoundation/">The Peoples String Foundation</a></li>
+		<li><a href="https://www.hallforcornwall.co.uk/Online/">The Hall For Cornwall</a></li>
+		<li><a href="http://o-region.co.uk/">o-region</a></li>
+		<li><a href="http://www.cube-theatre.co.uk/">Cube Theatre</a></li>
+		<li><a href="http://www.feasttheatre.com/">FEAST</a></li>
+		<li><a href="http://www.triflegatheringproductions.co.uk/">Trifle Gathering</a></li>
+		<li><a href="http://www.owdyado.co.uk/">Owdyado</a></li>
+		<li><a href="http://trebigganproductions.com/">Trebiggan</a></li>
+		<li><a href="http://www.kneehigh.co.uk/">Kneehigh Theatre</a></li>
+		<li><a href="http://www.miracletheatre.co.uk/">Miracle Theatre</a></li>
+		<li><a href="http://wildworks.biz/">Wildworks</a></li>
+	</ul>
+</div>
