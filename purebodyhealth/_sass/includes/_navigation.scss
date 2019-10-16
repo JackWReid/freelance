@@ -1,0 +1,25 @@
+/* ============= *\
+*     SITE NAV    *
+\* ============= */
+
+
+.site-nav{
+	width: 100%;
+	display: flex;
+
+	a{
+		flex: 1;
+		display: block;
+		padding: 1em;
+		text-align: center;
+		font-weight: $fw-bold;
+	}
+
+	@media screen and (max-width: $br-phone){
+		display: block;
+
+		a{
+			width: 100%;
+		}
+	}
+}

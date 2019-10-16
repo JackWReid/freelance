@@ -1,0 +1,11 @@
+# Site settings
+title: PureBody Health
+email: danny@purebodyhealth.co.uk
+description: A fitness and wellbeing centre in Great Dunmow, Essex.
+baseurl: ""
+url: "http://purebodyhealth.co.uk"
+
+# Build settings
+markdown: kramdown
+permalink: none
+exclude: [node_modules]

@@ -1,0 +1,79 @@
+// Gallery Card Container
+.gallery-stream{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1rem;
+}
+
+// Basic Gallery Card
+.gallery-card{
+	flex: 1;
+	min-width: 40vw;
+	margin: 1rem;
+	overflow: hidden;
+	background: $cool-grey;
+	font-family: $font-body;
+	text-align: center;
+	height: 30vw;
+	@media screen and (max-width: $tablet){
+		height: 35vw;
+	}
+	@media screen and (max-width: $mobile){
+		height: 50vw;
+	}
+}
+
+	.gallery-card__title{
+		font-size: 3vw;
+	}
+
+	.gallery-card__preview{
+		overflow: hidden;
+		filter: saturate(0%);
+		@include hover-fade;
+	}
+
+	.gallery-card__preview img{
+		margin-bottom: -5px;
+		max-width: 100%;
+		height: auto;
+	}
+
+		.gallery-card:hover .gallery-card__preview img{
+			filter: saturate(100%);
+		}
+
+	.gallery-card_nil{
+		@extend .gallery-card;
+		padding: 1rem;
+		color: $white;
+		background: $dark-red;
+		@include hover-fade;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		&:hover{
+			background: $facebook;
+		}
+	}
+
+		.gallery-card_nil h1{
+			margin: 0;
+		}
+
+// Safari Gallery Stream
+.gallery-stream_safari{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+	.gallery-card_safari{
+		@extend .gallery-card;
+		max-width: 50rem;
+	}
+
+	.gallery-stream_safari .gallery-card_nil{
+		max-width: 50rem;
+	}

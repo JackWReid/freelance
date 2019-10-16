@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-weight: normal !important;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}

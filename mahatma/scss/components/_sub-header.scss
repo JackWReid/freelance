@@ -1,0 +1,14 @@
+.sub-header{
+	position: relative;
+	z-index: -1;
+	background: $dark-red;
+	color: $white;
+	text-align: center;
+}
+
+	.sub-header__title{
+		margin: 0;
+		padding: 1rem;
+		font-size: 3rem;
+		font-family: $font-body;
+	}

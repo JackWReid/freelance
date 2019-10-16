@@ -1,0 +1,94 @@
+/*====================================*\
+	#TAG
+\*====================================*/
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+.tag-header{
+	position: relative;
+	z-index: 1;
+	background-image: url('../assets/img/pattern2d.jpg');
+	font-size: 3em;
+	text-align: center;
+	h1{ margin: 0; }
+	@include dropshadow;
+	@media screen and (max-width: 510px){
+		font-size: 2em;
+	}
+}
+
+	.tag-title{
+		padding: 0.1em;
+		@include fontstyle-title;
+	}
+
+
+
+
+/*------------------------------------*\
+  #STREAM
+\*------------------------------------*/
+
+.post-stream-stream{
+	max-width: 50em;
+	margin: 4em auto;
+	padding: 0 1em;
+}
+
+.post-stream-stream .post-stream_header{
+	text-align: center;
+	margin: 1em;
+}
+
+.post-stream-stream .post-stream_header_title{
+	@include fontstyle-title;
+	font-size: 3em;
+	color: $black;
+	margin-bottom: -0.1em;
+}
+
+.post-stream-stream .post-stream_preview p{
+	margin: 0.3em;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #GRID
+\*------------------------------------*/
+
+.loop-grid{
+	@include flexbox;
+	@include flexbox-wrap;
+	margin-top: 2em;
+}
+
+	.loop-grid article{
+		max-width: 25%;
+		margin: 1em;
+		padding: 1em;
+		@include flex(1);
+
+		background: $black;
+		@include animation-short(background);
+		&:hover{ background: $blue1; }
+		@include boxshadow;
+		text-align: center;
+
+		h1{
+			margin-bottom: 0;
+			@include fontstyle-title;
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 700px){
+			max-width: 50%;
+		}
+	}

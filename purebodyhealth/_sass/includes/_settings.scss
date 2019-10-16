@@ -1,0 +1,180 @@
+/* ============ *\
+*    SETTINGS    *
+\* ============ */
+
+
+/* == Colours == */
+
+$c-white: #FFFFFF;
+$c-grey: #EDEDED;
+$c-black: #333333;
+$c-green: #8DC63F;
+
+
+
+/* == Fonts == */
+
+$f-main: "Clear Sans", Helvetica, sans-serif;
+/* Forcing font boldness values because
+*  I want intermediate weights from the
+*  larger set, and to abstract them in
+*  my CSS. */
+$fw-regular: 400;
+$fw-bold: 700;
+
+@font-face {
+  font-family: 'Clear Sans';
+  src: url('../fonts/clear/clearsans-bold-webfont.eot');
+  src: url('../fonts/clear/clearsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/clear/clearsans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/clear/clearsans-bold-webfont.woff') format('woff'),
+       url('../fonts/clear/clearsans-bold-webfont.ttf') format('truetype'),
+       url('../fonts/clear/clearsans-bold-webfont.svg#clear_sansbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  src: url('../fonts/clear/clearsans-bolditalic-webfont.eot');
+  src: url('../fonts/clear/clearsans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/clear/clearsans-bolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/clear/clearsans-bolditalic-webfont.woff') format('woff'),
+       url('../fonts/clear/clearsans-bolditalic-webfont.ttf') format('truetype'),
+       url('../fonts/clear/clearsans-bolditalic-webfont.svg#clear_sansbold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  src: url('../fonts/clear/clearsans-italic-webfont.eot');
+  src: url('../fonts/clear/clearsans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/clear/clearsans-italic-webfont.woff2') format('woff2'),
+       url('../fonts/clear/clearsans-italic-webfont.woff') format('woff'),
+       url('../fonts/clear/clearsans-italic-webfont.ttf') format('truetype'),
+       url('../fonts/clear/clearsans-italic-webfont.svg#clear_sansitalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  src: url('../fonts/clear/clearsans-regular-webfont.eot');
+  src: url('../fonts/clear/clearsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/clear/clearsans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/clear/clearsans-regular-webfont.woff') format('woff'),
+       url('../fonts/clear/clearsans-regular-webfont.ttf') format('truetype'),
+       url('../fonts/clear/clearsans-regular-webfont.svg#clear_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* == Measures == */
+
+$br-phone: 700px;
+$br-tablet: 1000px;
+
+$m-content-column: 960px;
+/* $m-text-column-hard forces the text
+*  column width to match up when lined
+*  up vertically with elements with
+*  differing text size. */
+$m-text-column: 30em;
+$m-text-column-hard: 30rem;
+$m-baseline: 16px;
+/* $m-stripe-height is a constant for
+*  the height of the page nav bar and
+*  helps to keep elements below it. */
+$m-stripe-height: 100px;
+
+
+
+
+/* == Type Mixins == */
+
+@mixin panel-header ($size){
+	font-size: $size;
+	margin-top: 0;
+	line-height: 1.2em;
+}
+
+@mixin breathy-paragraph{
+	max-width: $m-text-column;
+	font-size: $m-baseline;
+	line-height: 1.4em;
+}
+
+@mixin text-link{
+	color: $c-green;
+	text-decoration: underline;
+}
+
+
+
+/* == Animation Mixins == */
+
+$tr-quick: all .3s ease-in-out;
+
+/* Used for animations that introduce
+*  elements to the screen. $delay falls
+*  back to 0 on null input to keep the
+*  mixin call compact. */
+@mixin invokeAnimation($keyframes, $duration, $delay:"0"){
+	animation-name: $keyframes;
+	animation-duration: $duration;
+	animation-timing-function: ease-out;
+  animation-delay: $delay;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+
+
+/* == Keyframes == */
+
+@keyframes topdown{
+	0% {
+		transform: translateY(-400px);
+		fill: $c-grey;
+	}
+
+	100% {
+		transform: translateY(0);
+		fill: $c-green;
+	}
+}
+
+@keyframes topdown--white{
+	0% {
+		transform: translateY(-400px);
+		fill: $c-green;
+	}
+
+	100% {
+		transform: translateY(0);
+		fill: $c-white;
+	}
+}
+
+@keyframes fadein{
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes rightdrawer{
+	0% {
+		transform: translateX(100vw);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

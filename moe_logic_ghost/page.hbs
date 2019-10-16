@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{> "header-branded"}}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+    {{#post}}
+
+        <header class="tag-header">
+            <h1 class="tag-title">{{title}}</h1>
+        </header>
+
+        <section class="page-content">
+            {{content}}
+        </section>
+
+    {{/post}}
+    
+    </article>
+
+</main>

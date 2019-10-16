@@ -1,0 +1,78 @@
+/*
+*	<div class="gallery">
+*		<dl class="gallery-item">
+*			<dt class="gallery-icon">
+*				<img class="attachment-medium">
+*			</dt>
+*		</dl>
+*	</div>	
+*/			
+
+// Wordpress Gallery Reset
+.gallery-item{
+	float: none;
+	margin: 0 !important;
+}
+
+	.gallery-item img{
+		width: 100% !important;
+		height: 100% !important;
+		background: none !important;
+		border: none !important;
+		margin-bottom: -3px;
+	}
+
+
+// Event Galleries
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery-item{
+	flex: 1;
+	overflow: hidden;
+	filter: grayscale(100%);
+
+	background: url('http://mahatmamusic.club/wp-content/uploads/2014/10/Launch.png');
+	background-position: center;
+	background-size: cover;
+
+	min-width: 32%;
+	max-height: 20vw;
+
+	@media screen and (max-width: $tablet){
+		min-width: 48%;
+		max-height: 30vw;
+	}
+	@media screen and (max-width: $mobile){
+		min-width: 100%;
+		max-height: 70vw;
+	}
+}
+
+// Event Galleries Safari
+.gallery_safari{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+}
+
+.gallery-item_safari{
+	margin: 1rem;
+	padding: 1rem;
+	filter: grayscale(100%);
+	background: $cool-grey;
+}
+
+	.gallery-item_safari{
+		& dt, & a, & img{
+			margin: 0 auto;
+			max-width: 100%;
+			overflow: hidden;
+		}
+		img{
+			height: auto;
+		}
+	}

@@ -1,0 +1,25 @@
+.social-links{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	@media screen and (min-width: $mobile){
+		margin-bottom: 1.5rem;
+	}
+}
+
+.social-links a{
+	font-size: 5rem;
+	padding: 0 1rem;
+}
+
+	.social-links__facebook{
+		color: $facebook;
+	}
+
+	.social-links__twitter{
+		color: $twitter;
+	}
+
+	.social-links__soundcloud{
+		color: $soundcloud;
+	}

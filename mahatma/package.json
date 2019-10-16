@@ -1,0 +1,16 @@
+{
+  "name": "mahatma_theme",
+  "description": "Wordpress theme for the nightlife company's website.",
+  "version": "1.0.0",
+  "author": "Jack Reid",
+  "repository": "https://github.com/JackWReid/mahatma.git",
+  "homepage": "http://jackwreid.uk",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-inject-string": "0.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-watch": "^4.3.5"
+  }
+}

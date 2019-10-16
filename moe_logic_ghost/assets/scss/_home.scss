@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  #SPLASH
+\*------------------------------------*/
+
+.home-template{
+	@include flexbox;
+	@include flex-direction(column);
+	width: 100%;
+	position: relative;
+}
+
+.splash{
+	flex: 1;
+	@include flexbox;
+	@include flex-justify(center);
+	@include flex-align(center);
+	background-image: url('../assets/img/pattern2d.jpg');
+}
+
+	.splash img{
+		max-width: 30em;
+	}

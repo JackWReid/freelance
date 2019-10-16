@@ -1,0 +1,75 @@
+// Event Cards Container
+.events-stream{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// Basic Event Card
+.events-card{
+	max-width: 70rem;
+	margin: 2rem;
+	@include card-shadow;
+	@media screen and (max-width: $tablet){
+		margin: 1rem;
+	}
+	@media screen and (max-width: $mobile){
+		margin: 0;
+		box-shadow: none;
+	}
+}
+
+	.events-card__date{
+		display: block;
+		width: 100%;
+		padding: .5rem;
+		font-family: $font-body;
+		text-transform: uppercase;
+		background: $red;
+		color: $white;
+	}
+
+	.events-card__main{
+		display: flex;
+		overflow: hidden;
+		@media screen and (max-width: $mobile){
+			flex-direction: column;
+		}
+	}
+
+		.events-card__info{
+			width: 20rem;
+			padding: 1rem;
+			text-align: center;
+			background: $warm-grey;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			@media screen and (max-width: $tablet){
+				width: 10rem;
+			}
+			@media screen and (max-width: $mobile){
+				width: 100%;
+			}
+		}
+
+			.events-card__info img{
+				width: 100%;
+				height: auto;
+			}
+
+		.events-card__description{
+			flex: 1;
+			padding: 1.5rem;
+			@include style-body;
+			@include body-link;
+			background: $cool-grey;
+			@media screen and (max-width: $mobile){
+				width: 100%;
+			}
+		}
+
+			.events-card__description__title{
+				margin-top: 0;
+				line-height: 1.2em;
+			}

@@ -1,0 +1,43 @@
+/* =============== *\
+*        POST       *
+\* =============== */
+
+
+
+.post{
+	max-width: 30em;
+	padding: 1em;
+	margin: 0 auto;
+
+	&-header{
+		&__title{
+			margin-bottom: 0;
+			font-weight: normal;
+			font-size: 3rem;
+			line-height: 1.2em;
+		}
+
+		&__meta{
+			color: $c-metal;
+			font-style: italic;
+		}
+	}
+
+	&-image{
+		max-width: 30em;
+		margin: 1em auto;
+	}
+
+	&-content{
+		margin-top: 3em;
+
+		 p{
+			max-width: 30em;
+			text-align: justify;
+		}
+	}
+
+	img{
+		margin-bottom: 1em;
+	}
+}

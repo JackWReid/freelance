@@ -1,0 +1,141 @@
+/*====================================*\
+	#SETTINGS
+\*====================================*/
+
+
+
+
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+
+$break-tablet: 822px;
+$break-social: 1000px;
+
+
+
+
+/*------------------------------------*\
+  #COLOURS
+\*------------------------------------*/
+
+$black: #222222;
+$blue1: #5292D2;
+$blue2: #4B9BD6;
+$grey: #A8A8A8;
+$white: #FFFFFF;
+
+
+
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+$fonts-body: 'Open Sans', sans-serif;
+$fonts-title: 'Oswald', sans-serif;
+
+@mixin fontstyle-body{
+	font-family: $fonts-body;
+	font-weight: normal;
+}
+
+@mixin fontstyle-header{
+	font-family: $fonts-body;
+	font-weight: bold;
+}
+
+@mixin fontstyle-title{
+	font-family: $fonts-title;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: $white;
+}
+
+
+
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Flexbox always invoked with mixin for prefixing, thanks to Chris
+ * Coyier.
+ */
+@mixin flexbox{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($var){
+	flex: $var;
+	-webkit-flex: $var;
+}
+
+@mixin flex-direction($var){
+	-webkit-flex-direction: $var;
+	flex-direction: $var;
+}
+
+@mixin flex-align($var){
+	-webkit-align-items: $var;
+	-ms-flex-align: $var;
+	align-items: $var;
+}
+
+@mixin flex-justify($var){
+	-webkit-justify-content: $var;
+	justify-content: $var;
+}
+
+@mixin flexbox-wrap{
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+
+
+
+/*------------------------------------*\
+  #DECORATION
+\*------------------------------------*/
+
+@mixin componentstyle-header{
+	padding: 1em;
+	background: $black;
+	color: $white;
+	@include fontstyle-title;
+	@include animation-short(background);
+	&:hover{ background: $blue1; }
+}
+
+@mixin dropshadow{
+	box-shadow: 0px 5px 14px 0px rgba(34, 34, 34, 0.53);
+}
+
+@mixin boxshadow{
+	box-shadow: 0px 0px 15px 0px rgba(34, 34, 34, 0.3);
+}
+
+@mixin animation-short($var){
+	transition: $var 0.25s ease-in-out;
+}
+
+@mixin inline-list{
+
+  list-style-type: none;
+
+  &, & li{
+
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+
+  }
+}

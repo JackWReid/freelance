@@ -1,0 +1,16 @@
+{
+    "rules": {
+      "semi": [ 1, "always" ],
+      "space-before-function-paren": [ 1, "never" ],
+      "no-new-object": 0,
+      "react/prop-types": 0
+    },
+    "env": {
+      "browser": true
+    },
+    "extends": ["standard", "plugin:react/recommended"],
+    "plugins": [
+        "standard",
+        "react"
+    ]
+}

@@ -1,0 +1,36 @@
+/* ============ *\
+*    CONTACT     *
+\* ============ */
+
+
+
+.contact-map{
+	width: 100%;
+	margin-top: $m-stripe-height;
+}
+
+.contact-split-pane{
+
+	&__inner{
+		max-width: $m-content-column;
+		margin: 3em auto;
+		padding: 0 1em;
+		display: flex;
+
+		@media screen and (max-width: $br-phone){
+			display: block;
+		}
+	}
+
+	&__pane{
+		max-width: $m-text-column;
+
+		&:first-child{
+			margin-right: 2em;
+		}
+
+		p{
+			@include breathy-paragraph;
+		}
+	}
+}

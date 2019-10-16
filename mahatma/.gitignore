@@ -1,0 +1,15 @@
+logs
+*.log
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
+.DS_Store
+mahatma.sublime-workspace
+build/Release
+node_modules
+.lock-wscript
+.sass-cache
+sftp-config.json

@@ -1,0 +1,167 @@
+/* ============ *\
+*      HOME      *
+\* ============ */
+
+
+/* Wraps the page for animation on load
+*  in and also provides grey background
+*  for content and navigation. */
+.page-wrapper--home{
+	background: $c-grey;
+	width: 100%;
+	opacity: 0;
+	@include invokeAnimation(fadein, .5s, 1s);
+}
+
+/* Container for the content to be laid
+*  horizontally. */
+.page-content--home{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	@media screen and (max-width: $br-tablet){
+		display: block;
+	}
+}
+
+	.main-column{
+		margin: 1em;
+		max-width: $m-content-column;
+
+		@media screen and (max-width: $br-tablet){
+			order: 0;
+		}
+	}
+
+	/* Side column secondary in the markup
+	*  but on the left hand side of the
+	*  layout. */
+	.side-column{
+		order: -1;
+		width: 400px;
+		margin: 1em;
+
+		@media screen and (max-width: $br-tablet){
+			margin: 0;
+			width: 100%;
+			order: 1;
+		}
+	}
+
+/* Placeholder look for the side column until
+*  we manage to nail down a passable masonry
+*  style image grid. */
+.strip-grid{
+	max-width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-direction: column;
+}
+
+	.strip-grid__item{
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		min-height: 100px;
+		margin-bottom: 20px;
+
+		background: rgba(0,0,0,0.2);
+		transition: all .3s ease-in-out;
+
+		&:hover{
+			background: $c-black;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+		.strip-grid__item__label{
+			color: $c-white;
+			text-align: center;
+			font-weight: $fw-bold;
+		}
+
+	/* Sign up form in sidebar */
+	.sign-up-form{
+		background: rgba(0,0,0,0.2);
+		padding: 10px 15px;
+
+		h2{
+			margin-top: 0;
+		}
+
+		.mc-field-group{
+			width: 100%;
+			display: flex;
+		}
+
+		label{
+			display: block;
+			width: 8em;
+		}
+
+		input[type="text"],
+		input[type="email"]{
+			flex: 1;
+			margin-bottom: 5px;
+		}
+
+		input[type="submit"]{
+			appearance: none;
+			background: none;
+			border: none;
+			outline: none;
+			margin-top: 10px;
+			background: $c-green;
+			color: $c-white;
+			padding: 5px 10px;
+		}
+	}
+
+/* Prominent information cards that currently
+*  have way too many hard-coded values. */
+.green-card{
+	width: 700px;
+	height: 300px;
+	margin: 0 2em 2em 2em;
+	color: $c-white;
+	background: $c-green;
+	transition: .1s all ease-in-out;
+
+	opacity: 0;
+	@include invokeAnimation(fadein, .5s, 1.5s);
+
+	/* Even spacing above, below, and between
+	*  a stack of green cards. */
+	&:not:first-child{
+		margin-top: 2em;
+	}
+
+	&:hover{
+		transform: scale(1.05);
+	}
+
+	&__link{
+		height: 100%;
+		width: 100%;
+		display: block;
+		padding: 2em;
+	}
+
+	&__title{
+		margin-top: 0;
+	}
+
+	@media screen and (max-width: $br-tablet){
+		margin: 0 auto 2em;
+	}
+
+	@media screen and (max-width: $br-phone){
+		width: 100%;
+	}
+}

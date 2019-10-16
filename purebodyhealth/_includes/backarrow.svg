@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15857) - http://www.bohemiancoding.com/sketch -->
+    <title>Back Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M100,199 C154.67619,199 199,154.67619 199,100 C199,45.3238098 154.67619,1 100,1 C45.3238098,1 1,45.3238098 1,100 C1,154.67619 45.3238098,199 100,199 Z M150.642857,92.2 L70.4142857,92.2 L89.7192857,73.027 C91.3656429,71.3919 92.1428571,69.4414 92.1428571,67.3 C92.1428571,63.2164 88.7456786,59 83.7857143,59 C81.5668929,59 79.6322143,59.80095 78.0192857,61.407 L44.7662143,94.4327 C43.3956429,95.7939 42,97.47465 42,100.5 C42,103.52535 43.1658214,104.982 44.6993571,106.50505 L78.0192857,139.593 C79.6322143,141.19905 81.5668929,142 83.7857143,142 C88.7498571,142 92.1428571,137.7836 92.1428571,133.7 C92.1428571,131.5586 91.3656429,129.6081 89.7192857,127.973 L70.4142857,108.8 L150.642857,108.8 C155.256,108.8 159,105.0816 159,100.5 C159,95.9184 155.256,92.2 150.642857,92.2 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Back-Arrow" sketch:type="MSArtboardGroup">
+            <g id="Oval-37">
+                <use fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <use fill="none" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

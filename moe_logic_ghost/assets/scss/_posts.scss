@@ -1,0 +1,76 @@
+/*====================================*\
+	#POSTS
+\*====================================*/
+
+
+/*------------------------------------*\
+  #POST-ARTICLE
+\*------------------------------------*/
+
+
+article.post-article{
+	margin-top: 60px;
+	@media screen and (max-width: $break-tablet){
+		margin-top: 0;
+	}
+}
+
+article.post-article .post-header{
+	position: relative;
+	z-index: 1;
+	background-image: url('../assets/img/pattern2d.jpg');
+	font-size: 3em;
+	text-align: center;
+	h1{ margin: 0; }
+	@include dropshadow;
+	@media screen and (max-width: 510px){
+		font-size: 2em;
+	}
+}
+
+	.post-title{
+		padding: 0.1em;
+		@include fontstyle-title;
+	}
+
+.post-meta{
+	text-align: center;
+	margin: 2em auto;
+}
+
+	.post-date{
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	.post-tags{
+		font-weight: bold;
+		color: $grey;
+	}
+
+.post-content{
+	max-width: 40em;
+	margin: 0 auto 2em auto;
+	padding: 0 1em;
+}
+
+	.post-content a{
+		color: $blue1;
+		text-decoration: underline;
+	}
+
+.post-footer{
+	max-width: 40em;
+	margin: 0 auto;
+}
+
+
+
+/*------------------------------------*\
+  #PAGE
+\*------------------------------------*/
+
+.page-content{
+	@extend .post-content;
+	margin-top: 5em;
+}

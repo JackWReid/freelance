@@ -1,0 +1,5 @@
+_site
+_images
+_config.yml
+node_modules
+.sass-cache

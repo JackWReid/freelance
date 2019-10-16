@@ -1,0 +1,146 @@
+/* ============== *\
+*    COMPONENTS    *
+\* ============== */
+
+
+
+/* == Gallery Component == */
+%wide-gallery{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 2em 0 0;
+
+	figure{
+		display: block;
+		margin: 0;
+		max-width: 31.5%;
+
+		@media (max-width: $m-content-column){
+			max-width: 47%;
+			margin: 10px 5px;
+		}
+
+		@media (max-width: $br-phone){
+			max-width: 100%;
+			padding: 5px;
+			margin: 10px auto;
+		}
+
+		img{
+			display: block;
+		}
+
+		figcaption{
+			text-align: center;
+			padding: 1em;
+			font-size: 12px;
+		}
+	}
+}
+
+
+
+
+/* == Back Arrow == */
+%nav-arrow{
+	max-width: 40px;
+	max-height: 40px;
+}
+
+
+/* == Dotgrid Animated Logo == */
+
+%dotgrid{
+	max-width: 100px;
+	max-height: 100px;
+	display: block;
+
+	circle{
+		transform: translateY(-400px);
+		@include invokeAnimation(topdown, .5s);
+	}
+
+	/* There must be a more elegant way
+	*  of making these declarations with
+	*  a mixin. */
+	.dot1,
+	.dot2,
+	.dot3,
+	.dot4{
+		animation-delay: 0.1s;
+	}
+
+	.dot5,
+	.dot6,
+	.dot7,
+	.dot8{
+		animation-delay: 0.2s;
+	}
+
+	.dot9,
+	.dot10,
+	.dot11,
+	.dot12{
+		animation-delay: 0.3s;
+	}
+
+	.dot13,
+	.dot14,
+	.dot15,
+	.dot16{
+		animation-delay: 0.4s;
+	}
+}
+
+%dotgrid--white{
+	max-width: 100px;
+	max-height: 100px;
+	display: block;
+
+	circle{
+		transform: translateY(-400px);
+		@include invokeAnimation(topdown--white, .5s);
+	}
+
+	/* There must be a more elegant way
+	*  of making these declarations with
+	*  a mixin. */
+	.dot1,
+	.dot2,
+	.dot3,
+	.dot4{
+		animation-delay: 0.1s;
+	}
+
+	.dot5,
+	.dot6,
+	.dot7,
+	.dot8{
+		animation-delay: 0.2s;
+	}
+
+	.dot9,
+	.dot10,
+	.dot11,
+	.dot12{
+		animation-delay: 0.3s;
+	}
+
+	.dot13,
+	.dot14,
+	.dot15,
+	.dot16{
+		animation-delay: 0.4s;
+	}
+}
+
+.snap-button{
+	display: block;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	background: $c-green;
+	color: $c-white;
+}

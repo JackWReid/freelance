@@ -1,0 +1,103 @@
+/* ============ *\
+*      PAGES     *
+\* ============ */
+
+
+
+/* Wraps around the quasi-modal pages
+*  and animates them in from the left
+*  on page load in to give the impression
+*  of a drawer. */
+.page-wrapper--modal{
+	transform: translateX(100vw);
+	@include invokeAnimation(rightdrawer, .5s);
+}
+
+
+
+/* Header and navigation element for
+*  quasi-modal pages. Includes the title
+*  of the page and a back arrow to get
+*  back to the homepage. Is fixed to the
+*  top of the view. */
+.stripe-back{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	width: 100%;
+	height: $m-stripe-height;
+	padding: 10px 1em;
+	background: $c-green;
+	color: $c-white;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include invokeAnimation(rightdrawer, .5s);
+
+		&__primary{
+			display: flex;
+			align-items: center;
+		}
+
+		&__arrow{
+		display: block;
+		float: left;
+		margin-right: 1em;
+
+			svg{
+				@extend %nav-arrow;
+			}
+		}
+
+		&__title{
+			margin: 0;
+		}
+
+		&__secondary{
+			display: flex;
+			align-items: center;
+
+			svg{
+				@extend %dotgrid--white;
+				max-height: 50px;
+				max-width: 50px;
+
+				circle{
+					fill: $c-white;
+				}
+			}
+		}
+
+	&__bottom{
+		p{
+			max-width: 30em;
+			color: $c-white;
+		}
+	}
+}
+
+
+
+/* Base style for page content wrappers
+*  to be extended for each individual
+*  page variant. */
+%content-wrapper{
+	width: 100%;
+	margin-top: $m-stripe-height; // Stripe height
+}
+
+
+
+%content-panel{
+	width: 100%;
+	padding: 2em 1em;
+
+	&:nth-child(2n){
+		background-color: $c-grey;
+	}
+}

@@ -1,0 +1,17 @@
+// Base Selector
+:root{
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Height Maxing
+:root, html, body{
+	min-height: 100vh;
+}
+
+// Fixed Footer Compensation
+@media screen and (min-width: $tablet){
+	.page-wrap{
+		margin-bottom: 65px;
+	}
+}

@@ -1,0 +1,21 @@
+/* ============== *\
+*     STYLE.CSS    *
+\* ============== */
+
+
+@import
+	"includes/reset.scss",
+	"includes/fonts.scss",
+	"includes/settings.scss",
+	"includes/header.scss",
+	"includes/navigation.scss",
+	"includes/footer.scss",
+
+	"global.scss",
+
+	"pages/home.scss",
+	"pages/bridal.scss",
+	"pages/news.scss",
+	"pages/contact.scss",
+	"pages/post.scss"
+;

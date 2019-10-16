@@ -1,0 +1,13 @@
+{{#foreach posts}}
+<article class="{{post_class}} post-stream">
+    <header class="post-stream_header">
+        <h2 class="post-stream_header_title"><a href="{{url}}">{{{title}}}</a></h2>
+        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+    </header>
+    <section class="post-stream_preview">
+        <p>{{excerpt words="50"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    </section>
+</article>
+{{/foreach}}
+
+{{pagination}}

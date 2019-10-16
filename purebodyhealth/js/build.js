@@ -1,0 +1,1 @@
+"use strict";$("#main a").click(function(i){i.preventDefault();var t=this.href;$("body").animate({opacity:"0"},500,function(){window.location=t})});

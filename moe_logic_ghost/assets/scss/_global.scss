@@ -1,0 +1,171 @@
+/*====================================*\
+	#GLOBAL
+\*====================================*/
+
+
+
+
+/*------------------------------------*\
+  #BASICS
+\*------------------------------------*/
+
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	@include fontstyle-body;
+}
+
+h1, h2, h3, h4, h5, h6{
+	@include fontstyle-header;
+}
+
+blockquote{
+	margin-left: 2px $blue1 solid;
+}
+
+main{
+	margin-top: 60px;
+	@media screen and (max-width: $break-tablet){
+		margin-top: 0;
+	}
+}
+
+.pagination{
+	display: none;
+}
+
+
+
+/*------------------------------------*\
+  #HEADER-BRANDED
+\*------------------------------------*/
+
+.header-branded{
+	text-align: center;
+	@include fontstyle-title;
+
+	position: fixed;
+	z-index: 2;
+	top: 0; right: 0; left: 0;
+}
+
+	.header-branded nav{
+		@include flexbox;
+	}
+
+		.header-branded nav div{
+			@include flex(1);
+			@include flexbox;
+			@include flex-direction(column);
+		}
+
+		.header-branded a{
+			background: $black;
+			&:hover{ background: $blue1; }
+			@include animation-short(background);
+		}
+
+		.header-branded a:first-child{
+			padding: 1.2em;
+			@include dropshadow;
+		}
+
+		.header-branded a:not(:first-child){
+			padding: 0.8em;
+			visibility: hidden;
+		}
+
+			.header-branded nav div:hover a{
+				visibility: visible;
+			}
+
+		/**
+		 * Social icons on the end of the navigation menu
+		 */
+		.header-branded div:last-child{
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-justify(center);
+			@include flex-align(center);
+			height: 62px;
+			background: $black;
+			color: $white;
+			
+			a:hover{
+				background: $black;
+			}
+
+			a:first-child{
+				padding: 0;
+			}
+
+			a:not(:first-child){
+				padding: 0;
+				visibility: visible;
+			}
+
+			i{
+				font-size: 3em;
+				padding: 0 0.5em;
+			}
+
+			@media screen and (max-width: $break-social){
+				display: none;
+			}
+		}
+
+.brand-badge{
+	max-width: 60px;
+	height: 62px;
+	a{
+		padding: 0 !important;
+	}
+	img{
+		width: 60px;
+		padding: 0.2em;
+	}
+}
+
+
+
+/*------------------------------------*\
+  #HEADER-BRANDED-MOBILE
+\*------------------------------------*/
+
+.header-branded-mobile{
+	display: none;
+	width: 100%;
+	nav{ width: 100%; }
+}
+
+/**
+* Mobile navigation switch hides one piece of markup and shows another.
+*/
+@media screen and (max-width: $break-tablet){
+	.header-branded{
+		display: none;
+	}
+	.header-branded-mobile{
+		@include flexbox;
+	}
+}
+
+	.header-branded-mobile nav{
+		@include flexbox;
+		@include flexbox-wrap;
+	}
+
+		.header-branded-mobile nav a{
+			width: 50%;
+			padding: 1em;
+			text-align: center;
+			background: $black;
+			@include fontstyle-title;
+		}
+
+		.header-branded-mobile nav a:first-child{
+			background: $blue1;
+		}

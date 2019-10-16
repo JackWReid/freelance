@@ -1,0 +1,51 @@
+/* ============== *\
+*       NEWS       *
+\* ============== */
+
+
+
+.news-posts{
+	margin: 0 auto;
+	max-width: $m-content-column;
+	padding: 1em;
+
+	&__item{
+		margin: 2em auto;
+
+		a{
+			display: flex;
+		}
+
+		&__image{
+			height: 300px;
+			width: 300px;
+		}
+
+		&__wrap{
+			margin-left: 2em;
+
+			p{
+				max-width: 30em;
+				text-align: justify;
+				line-height: 1.5em;
+			}
+		}
+
+		&__title{
+			font-weight: normal;
+			line-height: 1.2em;
+			margin: 0;
+		}
+
+		&__date{
+			color: $c-metal;
+			font-style: italic;
+		}
+
+		&__readmore{
+			color: $c-metal;
+			text-decoration: underline;
+			font-style: italic;
+		}
+	}
+}

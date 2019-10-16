@@ -1,0 +1,38 @@
+/* ============== *\
+*      CONTACT     *
+\* ============== */
+
+
+.contact-info{
+	margin: 0 auto;
+	padding: 1em;
+	max-width: $m-content-column;
+	display: flex;
+	justify-content: center;
+
+	&__column{
+		max-width: 30em;
+		text-align: justify;
+
+		&:nth-child(2){
+			margin: 0 2em;
+		}
+	}
+
+	/* Collapse to vertical at mobile sizes. */
+	@media screen and (max-width: $br-tablet){
+		display: block;
+	}
+}
+
+.contact-image{
+	margin-top: 1em;
+	height: 300px;
+	width: 250px;
+}
+
+.contact-map{
+	iframe{
+		margin-bottom: -10px;
+	}
+}

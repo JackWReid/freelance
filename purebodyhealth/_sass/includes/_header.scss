@@ -1,0 +1,30 @@
+/* =============== *\
+*    SITE HEADER    *
+\* =============== */
+
+/* The block-level element that contains
+*  the animated logo and title */
+.site-header{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	/* Global site logo, included as a
+	*  partial in the templates, with
+	*  styles for animation found in the
+	*  components SCSS partial. */
+	&__logo svg{
+		@extend %dotgrid;
+	}
+
+	&__title{
+		text-align: center;
+		margin-top: 1em;
+		font-size: 1.2rem;
+		opacity: 0;
+		@include invokeAnimation(fadein, .5s, 1s);
+	}
+}

@@ -1,0 +1,39 @@
+<footer class="site-footer">
+	<div class="site-footer__content">
+		<div class="site-footer__contact">
+			<p class="site-footer__contact__address">
+				<em>Muse Bridal</em><br>
+				123 High Street<br>
+				Newport<br>
+				Shropshire<br>
+				TF10 7BB
+			</p>
+			<p class="site-footer__contact__details">
+				<em>Tel: </em>01952 814631<br>
+				<em>Email: </em><a href="mailto:info@musebridal.co.uk">info@musebridal.co.uk</a>
+			</p>
+		</div>
+
+		<div class="site-footer__finial">
+			<img src="{{ site.url }}images/oval.svg" alt="Muse Bridal">
+		</div>
+
+		<div class="site-footer__opening-hours">
+			<h1 class="site-footer__opening-hours__title">Opening Hours</h1>
+			<ul class="site-footer__opening-hours__list">
+				<li><em>Monday - Friday:</em> 9.30am - 5pm</li>
+				<li><em>Saturday:</em> 9.30am - 4.30pm</li>
+				<li><em>Sunday:</em> Closed</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+	$(document).ready(function(){
+		if ($(".introduction--binary__image")){
+			$(".introduction--binary__image").scrollLeft(330);
+		}
+	});
+</script>

@@ -1,0 +1,166 @@
+// SITE HEADER
+
+.site-header{
+  width: 100vw;
+  background: $c-warm-light;
+}
+
+.site-header__banner{
+  width: 100vw;
+  padding: 1em;
+  @include display_flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  img{ max-height: 100px; }
+
+  @media screen and (max-width: $br-mobile){
+    @include flex-direction(row);
+    @include justify-content(center);
+
+    div{
+      display: none;
+    }
+  }
+}
+
+.site-header__banner__book{
+  @include display_flex;
+  @include flex-direction(column);
+  @include align-items(flex-end);
+  padding: 1em;
+}
+
+  .site-header__banner__book a.phone{
+    font-weight: bold;
+  }
+
+  .site-header__banner__book a.email{
+    font-style: italic;
+  }
+
+  .book-button{
+    background: $c-warm;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+// SITE HEADER NAVIGATION
+.site-header__nav{
+    // Primary
+  & > ul{
+    width: 100vw;
+    margin: 0;
+    @include display_flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  & > ul > li{
+    @include flex(1);
+    height: 55px;
+    position: relative;
+    text-align: center;
+    background: $c-warm;
+    transition: $s-smooth-ease;
+    & > a{
+      display: block;
+      width: 100%; height: 100%;
+      padding: 1em;
+    }
+  }
+
+  & > ul > li:hover{
+    background: $c-warm-light;
+  }
+
+  // Dropdown
+  & > ul > li > ul{
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    left: 0;
+    z-index: 1;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: $c-warm;
+
+    li{
+      background: $c-warm;
+      transition: $s-smooth-ease;
+      &:hover{background: $c-warm-light;}
+
+      & > a{
+        display: block;
+        width: 100%; height: 100%;
+        padding: .5em;
+      }
+    }
+
+    @media screen and (max-width: $br-mobile){
+      display: none;
+    }
+  }
+
+  // Dropdown Trigger
+  & > ul > li > ul{
+    display: none;
+  }
+
+  & > ul > li:hover > ul{
+    display: block;
+  }
+
+  // Collapse
+  @media screen and (max-width: $br-mobile){
+    & > ul{
+      display: block;
+    }
+
+    & > ul li{
+      display: block;
+    }
+  }
+}
+
+// IMAGES
+
+.photo-stripe{
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center; 
+}
+
+.photo-group{
+  width: 100%;
+  height: 300px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  transition: $s-smooth-ease;
+}
+
+  .photo-group:hover{
+    height: 90vh;
+  }
+
+  .photo-group > div{
+    min-width: 90%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+// TEASE
+
+.tease{
+  background: #DDD;
+  display: flex;
+  @include display_flex;
+  @include justify-content(content);
+  @include align-items(center);
+}

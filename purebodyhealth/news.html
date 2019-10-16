@@ -1,0 +1,33 @@
+---
+layout: page
+title: News
+permalink: /news/
+---
+
+<header class="stripe-back">
+	<div class="stripe-back__primary">
+		<a href="{{ site.url }}/" class="stripe-back__link">
+			<div class="stripe-back__arrow">
+				{% include backarrow.svg %}
+			</div>
+		</a>
+		<h1 class="stripe-back__title">News</h1>
+	</div>
+	<div class="stripe-back__secondary">
+		{% include logo.svg %}
+	</div>
+</header>
+
+<div class="page-wrapper--modal">
+	<section class="news-slab">
+		<ul class="news-slab__list">
+			{% for post in site.posts %}
+				<li class="news-item post-{{ post.date | date: '%d%m%y' }}">
+					<h1 class="news-item__title">{{ post.title }}</h1>
+					<time class="news-items__date">{{ post.date | date: '%B %d, %Y' }}</time>
+					<div class="news-item__content">{{ post.content }}</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+</div>

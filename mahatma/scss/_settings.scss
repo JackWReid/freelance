@@ -1,0 +1,115 @@
+// Colours
+$white: #FFF;
+$black: #222;
+$red: #89181C;
+$dark-red: #631114;
+$blue: #0054A6;
+$dark-blue: #003D78;
+$cool-grey: #DDD;
+$warm-grey: #D9C6B1;
+
+$facebook: #3B5998;
+$twitter: #55ACEE;
+$soundcloud: #F80;
+
+// Breakpoints
+$mobile: 450px;
+$tablet: 700px;
+$small-screen: 1000px;
+$large-screen: 1900px;
+
+// Fonts
+@font-face {
+  font-family: 'Edo';
+  src:
+    url('./fonts/edosz.woff') format('woff2'),
+    url('./fonts/edosz.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN';
+  src:
+    url('./fonts/din-regular.woff') format('woff2'),
+    url('./fonts/din-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN';
+  src:
+    url('./fonts/din-bold.woff') format('woff2'),
+    url('./fonts/din-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$font-title: 'Edo', sans-serif;
+$font-body: 'DIN', sans-serif;
+
+@mixin style-body{
+	font-size: 18px;
+	font-family: $font-body;
+	line-height: 1.3em;
+}
+
+// Animations
+@mixin hover-fade{
+  transition: all .25s ease-in-out;
+}
+
+// Decorations
+@mixin card-shadow{
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+@mixin body-link{
+  a{
+    color: $red;
+    font-weight: bold;
+    text-decoration: underline;
+    @include hover-fade;
+    &:hover{color:$dark-red};
+  }
+
+  a[href^="http://facebook"],
+  a[href^="http://www.facebook"],
+  a[href^="https://facebook"],
+  a[href^="https://www.facebook"],
+  a[href^="facebook"],
+  {
+    color: $red;
+    font-weight: bold;
+    text-decoration: underline;
+    @include hover-fade;
+    &:hover{ color: $facebook };
+  }
+
+  a[href^="http://twitter"],
+  a[href^="http://www.twitter"],
+  a[href^="https://twitter"],
+  a[href^="https://www.twitter"],
+  a[href^="twitter"],
+  {
+    color: $red;
+    font-weight: bold;
+    text-decoration: underline;
+    @include hover-fade;
+    &:hover{ color: $twitter };
+  }
+  
+  a[href^="http://soundcloud"],
+  a[href^="http://www.soundcloud"],
+  a[href^="https://soundcloud"],
+  a[href^="https://www.soundcloud"],
+  a[href^="soundcloud"],
+  {
+    color: $red;
+    font-weight: bold;
+    text-decoration: underline;
+    @include hover-fade;
+    &:hover{ color: $soundcloud };
+  }
+}

@@ -1,0 +1,51 @@
+// Porthole Section Wrapper
+.porthole-section{
+	font-family: $font-body;
+	padding: 2rem 0;
+}
+
+	.porthole-section__title{
+		max-width: 3em;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 3rem;
+		border-bottom: 5px $red solid;
+	}
+
+	.porthole-section-stream{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.porthole-section__unit{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 30rem;
+		margin: 2rem;
+	}
+
+		.porthole-section__unit__image{
+			width: 20rem;
+			height: 20rem;
+			border-radius: 20rem;
+		}
+
+		.porthole-section__unit__text{
+			margin-top: 1rem;
+			font-size: 1.5rem;
+			text-align: center;
+			@include body-link;
+		}
+
+			.porthole-section__unit__text h1{
+				margin: 0;
+				padding: 0;
+				font-size: 2rem;
+			}
+
+			.porthole-section_unit_text p:first-child{
+				padding: 0;
+				margin: 0;
+			}

@@ -1,0 +1,18 @@
+/* ============== *\
+*     STYLE.CSS    *
+\* ============== */
+
+
+@import 'includes/reset',
+				'includes/settings',
+				'global',
+				'includes/components',
+				'includes/header',
+				'includes/navigation',
+
+				'pages/home',
+				'pages/page',
+				'pages/wellbeing',
+				'pages/the-team',
+				'pages/contact'
+				;

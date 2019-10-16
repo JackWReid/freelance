@@ -1,0 +1,66 @@
+
+$c-black: #282828;
+$c-white: #F8F8F8;
+$c-blue: #6D9F92;
+$c-orange: #FF3C00;
+$c-bright: #19FFC3;
+
+$an-quick: fadein .3s;
+$tr-quick: opacity ease-in .3s;
+
+$m-tablet: 800px;
+$m-measure: 25rem;
+
+@mixin anquick{
+  animation-name: fadein;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein{
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+$f-primary: "Circular", Futura, sans-serif;
+$f-code: "Hack", monospace;
+
+@font-face {
+	font-family: 'Circular';
+	src: url('./fonts/CircularBold.eot');
+	src: url('./fonts/CircularBold.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/CircularBold.woff') format('woff'),
+		url('./fonts/CircularBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('./fonts/CircularBold.eot');
+	src: url('./fonts/CircularBold.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/CircularBold.woff') format('woff'),
+		url('./fonts/CircularBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('./fonts/CircularMedium.eot');
+	src: url('./fonts/CircularMedium.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/CircularMedium.woff') format('woff'),
+		url('./fonts/CircularMedium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('./fonts/CircularMedium.eot');
+	src: url('./fonts/CircularMedium.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/CircularMedium.woff') format('woff'),
+		url('./fonts/CircularMedium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
